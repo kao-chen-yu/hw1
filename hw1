@@ -1,0 +1,24 @@
+ int[] A = new int[100];
+ int l = 0;
+ 
+while (numInt > 0) {
+     A[l] = numInt % 2;
+     numInt /= 2;
+	 l++;
+}
+
+
+for(int i = 1 ; i < l +1 ; i ++){
+	boolean ok = true;
+	
+	for(int j = 0 ; j < l - i ; j++){
+		if(d[k] != d[j+i]){
+			ok = false;
+			break;
+		}
+	}
+	
+	if(ok)
+		return i;
+}
+return -1;
